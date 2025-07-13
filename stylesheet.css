@@ -70,7 +70,9 @@ body{
   .menu-toggle {
     display: block;
   }
-
+  .navbar{
+    display: none;
+  }
   .sidebar {
     position: fixed;
     top: 0;
