@@ -11,11 +11,14 @@
     <header class="header">
         <div class="container">
             <a href="#" class="logo">Portfolio</a>
-            <nav class="navbar">
-                <a href="index.html">Home</a>
-                <a href="#about">About Me</a>
-                <a href="#skill">Skill</a>
-                <a href="#">Contact</a>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+            <nav class="sidebar" id="sidebar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skill">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
@@ -106,6 +109,21 @@
         </div>
     </footer>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const sidebar = document.getElementById("sidebar");
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("show");
+        });
+
+        // Optional: close sidebar when clicking a link
+        document.querySelectorAll('.sidebar a').forEach(link => {
+            link.addEventListener('click', () => {
+            sidebar.classList.remove('show');
+            });
+        });
+    </script>
 
 </body>
 </html>
