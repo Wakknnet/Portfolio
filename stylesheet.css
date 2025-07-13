@@ -52,7 +52,7 @@ body{
     color: #0ef;
 }
 /* HOME */
-.home{
+.home {
     position: relative;
     width: 100%;
     justify-content: space-evenly;
@@ -62,8 +62,7 @@ body{
     background-position: center;
     display: flex;
     align-items: center;
-    padding: 70px 10% 0;
-
+    padding: 120px 10% 0; /* <- was 70px, now 120px to clear header */
 }
 .home-photo {
     display: flex;
@@ -173,7 +172,6 @@ body{
 .social-icon:hover::before {
     opacity: 1;
 }
-
 @media (max-width: 1024px) {
   .home {
     flex-direction: column;
@@ -244,6 +242,7 @@ body{
     margin: 10px;
   }
 }
+
 
 /* Content Section */
 .content-section {
@@ -617,3 +616,116 @@ body{
   }
 }
 
+/* MASTER RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .navbar a {
+    font-size: 20px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    text-align: center;
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 5%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navbar a {
+    font-size: 18px;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .social-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-photo::before {
+    width: 220px;
+    height: 220px;
+  }
+
+  .home-photo img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .navbar {
+    gap: 12px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  .footer-section {
+    padding: 30px 5%;
+  }
+
+  .footer-section p {
+    font-size: 0.9rem;
+  }
+
+  .social-links a {
+    padding: 8px;
+    font-size: 1rem;
+  }
+}
